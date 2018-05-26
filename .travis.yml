@@ -10,8 +10,8 @@ cache:
 install:
   - yarn install
 script:
+  - npm start
   - npm test
-  - npm run build
 deploy:
   provider: heroku
   api_key:
