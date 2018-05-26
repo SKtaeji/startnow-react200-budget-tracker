@@ -21,6 +21,8 @@ describe('express', () => {
     nightmare = new Nightmare();
   });
 
+  this.timeout(15000);
+
   it('should have the correct page title', () =>
     nightmare
       .goto(url)
