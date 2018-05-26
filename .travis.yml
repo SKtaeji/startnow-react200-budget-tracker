@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- '9'
+dist: trusty
+env:
+- NODE_ENV=production
+cache:
+  directories:
+  - node_modules
+install:
+- npm install
+script:
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: F5Pv8FiCFPNkDAv/ZhvcWtqmxOrxTFlRUA9eHoGdLGvTAW646PMH2v/R3779N+Mr+uxnKOgj9ULZUeCfTvEbO1tWYH0QeGNgUkNbYgn78j2nAei7quRiDPOWDTchRxNQsQXULwl5CummTjV8LKXdqmaciZ4zPmJJkxLXT+hOOGGMZM6cCjTH5ilr3QE7lQz8v+ALcdpx+A50aAbfwuKNdge8npIqWC26EBCNDMzUm3V9L5YKtPQSCLhce8URMK6lwGV176bhrDRWWJR9MdXXhzJ3g+oZXlBY84sbzY4JEDG0THO8OYyzIWCoOO/VUwwApEKgdwvwRmANwNG4xibOLqob/VHqIZMir9sisAfaSY72XO7/CUZB0BazZF/nP7VXC4Rmc5A3STDTvinOZe78h5/5iKpyd562qcV5lpfLCrwDTc1AczqtVCAhxrRKwXLk5DZ+scm7aCjAxvXyDdm7oFrWlepn8k6iGbGvBw75+nEKUVFcrpSw+ocDOfMos+R+XP7nXDw/e7O0y/zGn7J8I1rcD5E9UzFRx6jN/dbVAvrBsrSIiPm9+EZn3yzHYilSaY4qSAMiJlP5JugDjVm5rEtoirCwe6R0qgAVLeagLkWdIRW+TxJH0YTOb2BsuGdoxo62dzScAxqD8IkBqqEGvacgof/WF59ss9o6dvqC3jo=
+  app: sk-react200-budget-tracker
+  on:
+    repo: SKtaeji/startnow-react200-budget-tracker
