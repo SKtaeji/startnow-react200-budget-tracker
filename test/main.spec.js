@@ -28,6 +28,7 @@ describe('express', () => {
       .end()
       .then((text) => {
         expect(text).to.contain('Budget Tracker');
+        done();
       })
   );
 
