@@ -10,7 +10,7 @@ cache:
 install:
   - yarn install
 script:
-  - npm start
+  - npm run build
   - npm test
 deploy:
   provider: heroku
